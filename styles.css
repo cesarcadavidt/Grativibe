@@ -1,0 +1,426 @@
+/* General Styling */
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #5c5c5c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Stretch content between header and footer */
+    min-height: 100vh;
+}
+
+/* Header Section with Grativibe Branding */
+header {
+    background: linear-gradient(135deg, #96dceb, #2193b0);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure header takes full width */
+    box-sizing: border-box; /* Ensure padding doesn't create overflow */
+}
+
+/* Header container to align logo and brand name */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative; /* To position the underline absolutely */
+}
+
+/* App logo in the header */
+.app-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px; /* Space between logo and brand name */
+}
+
+/* Brand name */
+.brand-name {
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Orange underline for the entire header container (icon + name) */
+.header-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust to move line closer or farther from the text */
+    width: 400px;    
+    height: 5px;
+    background: linear-gradient(45deg, #fead94, #ff7043);
+    border-radius: 5px;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+/* Improved CTA Text Styling */
+.cta-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ff7043; /* Just an outline */
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.cta-text:hover {
+    color: #fead94;
+    border-color: #ffffff;
+}
+
+/* Navigation Menu with Orange Gradient Background */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+    background: linear-gradient(135deg, #fccabb, #fead94); /* Orange gradient */
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 100%; /* Ensure nav doesn't overflow */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Make text white for contrast */
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #2193b0; /* Change hover to a darker color for emphasis */
+}
+
+/* Section Styling */
+section {
+    margin: 0 auto 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+    box-sizing: border-box; /* Consider padding inside width */
+    min-height: 900px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fade-in Effect */
+.tab-content {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    height: 100%;
+}
+
+.tab-content:not(.hidden) {
+    opacity: 1;
+}
+
+/* Styling the Daily Inspiration Section */
+#quotes-section {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Quote Styling */
+.quote-text {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #5c5c5c;
+    flex: 30%;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Control Image Size */
+.quote-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: auto;
+    transition: transform 0.3s ease;
+    flex: 65%;
+}
+
+.quote-image:hover {
+    transform: scale(1.02);
+}
+
+.quote-placeholder {
+    flex: 5%;
+}
+
+.habit-input {
+    width: 450px;
+    margin: 0 20px;
+}
+
+#habit-list {
+    padding-right: 40px;
+}
+
+#habit-list li {
+    text-align: start;
+}
+
+/* Habit Item Container */
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Align habit text to the left */
+.habit-item span {
+    flex: 1; /* Makes the habit text take up most of the space */
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+/* Align checkboxes and delete buttons to the right */
+.habit-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff7043; /* Default orange color */
+    cursor: pointer;
+    transition: accent-color 0.3s ease;
+}
+
+/* Style for checkbox when checked */
+.habit-checkbox:checked {
+    accent-color: #96dceb; /* Light blue when checked */
+}
+
+/* Delete button (trash icon) */
+.delete-btn {
+    background-color: #96dceb;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+    background-color: #fead94; /* Light blue */
+}
+/* Completed habit text (for strikethrough effect) */
+.completed {
+    text-decoration: line-through;
+    color: #8c8c8c;
+}
+
+/* Button Styling */
+button {
+    background-color: #ff9271;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff7043;
+    transform: scale(1.05);
+}
+
+/* Meditation steps styling */
+#meditation-steps {
+    text-align: center;
+    margin: 30px auto;
+    padding: 0 15px;
+    width: 90%;
+    max-width: 600px;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    color: #5c5c5c;
+}
+
+/* Animation for steps (fades in each step slowly) */
+.meditation-step {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInStep 1s forwards;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Delay applied via JavaScript */
+.meditation-step.fade-in-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styling for the current meditation step */
+.current-step {
+    color: #2193b0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes fadeInStep {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling the meditation timer */
+#meditation-timer {
+    font-size: 2.5rem;
+    color: #ff7043;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.meditation-btn {
+    margin: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #96dceb, #2193b0);
+    color: white;
+    padding: 20px;
+    text-align: end;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 1341px) {
+    .quote-placeholder {
+        display: none;
+    }
+    .quote-text {
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 820px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    section {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .brand-name {
+        font-size: 2.2rem;
+    }
+
+    .header-container {
+        margin-bottom: 30px;
+    }
+
+    .header-container::after {
+        width: 250px;
+        bottom: -20px;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .habit-input {
+        width: 150px;
+        margin: 0 20px;
+    }
+
+    #meditation-steps {
+        font-size: 0.6rem;
+    }
+
+    .current-step {
+        font-size: 1.2rem;
+    }
+}
