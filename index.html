@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grativibe - The Key to Being Happy Every Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header Section with Grativibe Branding -->
+    <header>
+        <div class="header-container">
+            <img src="images/grativibe.png" alt="App Logo" class="app-logo">
+            <h2 class="brand-name">Grativibe</h2>
+        </div>
+        <h1>Unlock Daily Happiness with Quotes, Healthy Habits, and Meditation.</h1>
+        <p class="cta-text">Start Your Journey to Happiness</p>
+    </header>
+
+    <!-- Main Navigation (Three Menus) -->
+    <nav>
+        <ul>
+            <li><a href="#" data-section="quotes-section" class="tab-link active">Daily Quotes</a></li>
+            <li><a href="#" data-section="habits-section" class="tab-link">Health Habits</a></li>
+            <li><a href="#" data-section="meditation-section" class="tab-link">Meditation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Quotes Section -->
+    <section id="quotes-section" class="tab-content">
+        <h2>Daily Inspiration</h2>
+        <div class="flex-container">
+            <div class="quote-placeholder"></div>
+            <img id="quote-image" src="" alt="Inspirational Quote Image" class="quote-image">
+            <p id="quote-text" class="quote-text"></p>     
+        </div>
+        <button id="new-quote-btn">Get a New Quote</button>
+    </section>    
+
+    <!-- Health Habits Section -->
+    <section id="habits-section" class="tab-content hidden">
+        <h2>Habit Tracking Made Easy</h2>
+        <form id="habit-form">
+            <input type="text" id="habit-input" placeholder="Enter a habit" class="habit-input">
+            <button type="submit" class="meditation-btn">Add Habit</button>
+        </form>
+        <ul id="habit-list"></ul>
+    </section>
+
+    <!-- Meditation Section -->
+    <section id="meditation-section" class="tab-content hidden">
+        <h2>Peace of Mind through Meditation</h2>
+        <button id="meditate-btn" class="meditation-btn">Start 5-Minute Meditation</button>
+        <button id="restart-btn" class="meditation-btn">Restart with New Song</button>
+        <p id="meditation-timer">05:00</p>
+        <div id="meditation-steps"></div> <!-- Container for meditation steps -->
+        <audio id="meditation-audio" src=""></audio>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Idea by Valentina Cano Gaviria</p>
+        <p>&copy; <span id="current-year"></span> Grativibe. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
